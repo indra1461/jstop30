@@ -1,5 +1,5 @@
 function deepClone(obj){
-    let clone = Array.isArray(obj) ? [] : {};;
+    let clone = Array.isArray(obj) ? [] : {};
     for (let key in obj) {
         if(typeof obj[key] === "object" && obj[key] !== null) {
             clone[key] = deepClone(obj[key]);

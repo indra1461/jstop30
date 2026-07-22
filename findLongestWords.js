@@ -11,4 +11,4 @@ return longest;
 
 }
 
-console.log(findLongestWords("i love word"));
+console.log(findLongestWords("i love word javascript"));

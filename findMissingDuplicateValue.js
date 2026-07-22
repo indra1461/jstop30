@@ -23,5 +23,5 @@ for(let i = 1; i<= arr.length; i++){
     }
 }
 
-console.log("mising", missing);
+console.log("missing", missing);
 console.log("duplicate", duplicate);
