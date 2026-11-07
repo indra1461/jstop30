@@ -1,16 +1,15 @@
 // const arr = [1, 2, 2, 3, 1, 1, 4];
-const arr = [1, "1", true, "true"];
+//const arr = [1, "1", true, "true"];
 const users = [
   { id: 1, role: "admin" },
   { id: 2, role: "user" },
   { id: 3, role: "admin" },
   { id: 4, role: "user" },
-  { id: 5, role: "admin" }
+  { id: 5, role: "admin" },
 ];
 
-let freq = {};
-let mix = new Map()
-
+//let freq = {};
+let mix = new Map();
 
 // for(let i = 0; i < arr.length;i++){
 //     let current = arr[i];
@@ -32,12 +31,13 @@ let mix = new Map()
 //     }
 // }
 
-for(let i = 0; i < users.length;i++){
-    if(!mix.has(users[i].role)){
-        mix.set(users[i].role, 1)
-    }else{
-        mix.set(users[i].role, mix.get(users[i].role) + 1)
-    }
+for (let i = 0; i < users.length; i++) {
+  let cur = users[i];
+  if (!mix.has(cur.role)) {
+    mix.set(cur.role, 1);
+  } else {
+    mix.set(cur.role, mix.get(cur.role) + 1);
+  }
 }
 
 console.log(mix);

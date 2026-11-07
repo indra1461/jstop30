@@ -10,8 +10,6 @@ Array.prototype.myFilter = function (callback) {
   return result;
 };
 
-const output = [1, 2, 3, 4].myFilter(
-  (item) => item > 2
-);
+const output = [1, 2, 3, 4].myFilter((item) => item > 2);
 
 console.log(output); // [3, 4]

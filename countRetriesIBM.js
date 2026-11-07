@@ -1,22 +1,20 @@
-function countRetrives(gap,reqid, timestamps){
-    let freq = {};
-    let count = 0;
+function countRetrives(gap, reqId, timestamps) {
+  let freq = {};
+  let count = 0;
 
-    for(let i = 0;i<reqId.length;i++){
-        let cur = reqId[i];
-        let time  = timestamps[i]
-        if(freq[cur] !== undefined){
-            if(time - freq[cur] <= gap){
-                count++;
-            }
-        }
-        freq[cur] = time;
+  for (let i = 0; i < reqId.length; i++) {
+    let cur = reqId[i];
+    let time = timestamps[i];
+    if (freq[cur] !== undefined) {
+      if (time - freq[cur] <= gap) {
+        count++;
+      }
     }
+    freq[cur] = time;
+  }
 
-return count;
-
+  return count;
 }
-
 
 // Example
 let gap = 10;
@@ -24,7 +22,6 @@ let reqId = ["r1", "r1", "r1", "r2", "r2"];
 let timestamps = [100, 105, 200, 300, 302];
 
 console.log("countRetrive", countRetrives(gap, reqId, timestamps));
-
 
 // dryRun
 
